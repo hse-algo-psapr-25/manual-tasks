@@ -74,13 +74,13 @@ $$
 
 $$
 \begin{cases}
-\lambda_1 + \lambda_2 = -6,\\
-\lambda_1 \cdot \lambda_2 = 27
+\lambda_1 + \lambda_2 &=& -6,\\
+\lambda_1 \cdot \lambda_2 &=& 27
 \end{cases}
-\quad \Rightarrow \quad
+\quad \Rightarrow \qquad
 \begin{cases}
-\lambda_1 = -3,\\
-\lambda_2 = 9
+\lambda_1 &=& -3,\\
+\lambda_2 &=& 9
 \end{cases}
 $$
 
@@ -111,8 +111,8 @@ $$
 
 $$
 \begin{cases}
--3C_1 + 9C_2 &= 6,\\
-9C_1 + 81C_2 &= 63.\\
+-3C_1 + 9C_2 &=& 6,\\
+9C_1 + 81C_2 &=& 63.\\
 \end{cases}
 $$
 
