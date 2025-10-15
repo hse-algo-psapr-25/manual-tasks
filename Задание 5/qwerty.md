@@ -103,8 +103,10 @@ $$
 Запишем рекуррентные выражения для этих определителей:
 
 $$
-\Delta_1 = C_1 \cdot (-3) + C_2 \cdot 9, \\
-\Delta_2 = C_1 \cdot 9 + C_2 \cdot 81.
+\begin{aligned}
+& \Delta_1 = C_1 \cdot (-3) + C_2 \cdot 9, \\
+& \Delta_2 = C_1 \cdot 9 + C_2 \cdot 81.
+\end{aligned}
 $$
 
 Подставим найденные значения определителей и получим систему уравнений с неизвестными $C_1$ и $C_2$:
@@ -131,21 +133,25 @@ $$
 По формулам Крамера для $C_1$:
 
 $$
-\Delta_{C_1} = \begin{vmatrix}
+\begin{aligned}
+& \Delta_{C_1} = \begin{vmatrix}
 6 & 9 \\
 63 & 81 \\
 \end{vmatrix} = -81, \\
-C_1 = \frac{\Delta_{C_1}}{\Delta} = \frac{-81}{-324} = \frac{1}{4}.
+& C_1 = \frac{\Delta_{C_1}}{\Delta} = \frac{-81}{-324} = \frac{1}{4}.
+\end{aligned}
 $$
 
 Найдём $C_2$:
 
 $$
-\Delta_{C_2} = \begin{vmatrix}
+\begin{aligned}
+& \Delta_{C_2} = \begin{vmatrix}
 -3 & 6 \\
 9 & 63 \\
 \end{vmatrix} = -243, \\
-C_2 = \frac{\Delta_{C_2}}{\Delta} = \frac{-243}{-324} = \frac{3}{4}.
+& C_2 = \frac{\Delta_{C_2}}{\Delta} = \frac{-243}{-324} = \frac{3}{4}.
+\end{aligned}
 $$
 
 3. Получаем формулу частного решения
