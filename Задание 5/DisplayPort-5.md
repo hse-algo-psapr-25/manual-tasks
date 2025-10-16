@@ -21,7 +21,9 @@ $$
 \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
 0 & 0 & 0 & \cdots & 7 & 6 \\
 0 & 0 & 0 & \cdots & 2 & 7
-\end{vmatrix} = 7 \cdot (-1)^{1 + 1}\cdot \begin{vmatrix} 7 & 6 & \cdots & 0 & 0 \\ 2 & 7 & \cdots & 0 & 0 \\
+\end{vmatrix} = 7 \cdot (-1)^{1 + 1}\cdot 
+\begin{vmatrix} 7 & 6 & \cdots & 0 & 0 \\
+2 & 7 & \cdots & 0 & 0 \\
 \vdots & \vdots & \ddots & \vdots & \vdots \\
 0 & 0 & \cdots & 7 & 6 \\
 0 & 0 & \cdots & 2 & 7
