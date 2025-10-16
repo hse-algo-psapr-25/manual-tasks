@@ -12,10 +12,38 @@ A =
  \end{pmatrix}    
 $$
 
-Обозначим искомый определитель через $x_n$,  тогда справедливо следующее:
-$x_n = 10 \cdot x_{n-1} - 25 \cdot x_{n-2}$
+Обозначим искомый определитель через $x_n$. Для его нахождения воспользуемся методом разложения матрицы по первой строке:
 
-1) Составим и решим характеристическое уравнение:
+$$
+x_n = 10 *  \begin{pmatrix}    
+  10 & 5 & 0 & \cdots & 0 & 0 \\    
+  5 & 10 & 5 & \cdots & 0 & 0 \\    
+  0 & 5 & 10 & \cdots & 0 & 0 \\    
+  \vdots  & \vdots & \vdots & \ddots & \vdots & \vdots  \\    
+  0 & 0 & 0 & \cdots & 10 & 5 \\    
+  0 & 0 & 0 & \cdots & 5 & 10     
+ \end{pmatrix}     - 5 *  \begin{pmatrix}    
+  5 & 5 & 0 & \cdots & 0 & 0 \\    
+  0 & 10 & 5 & \cdots & 0 & 0 \\    
+  0 & 5 & 10 & \cdots & 0 & 0 \\    
+  \vdots  & \vdots & \vdots & \ddots & \vdots & \vdots  \\    
+  0 & 0 & 0 & \cdots & 10 & 5 \\    
+  0 & 0 & 0 & \cdots & 5 & 10     
+ \end{pmatrix}    
+ = 10 * x_{n-1} - 5 * 5 * \begin{pmatrix}    
+  10 & 5 & 0 & \cdots & 0 & 0 \\    
+  5 & 10 & 5 & \cdots & 0 & 0 \\    
+  0 & 5 & 10 & \cdots & 0 & 0 \\    
+  \vdots  & \vdots & \vdots & \ddots & \vdots & \vdots  \\    
+  0 & 0 & 0 & \cdots & 10 & 5 \\    
+  0 & 0 & 0 & \cdots & 5 & 10  
+ \end{pmatrix}
+ = 10 * x_{n-1} - 5 * 5 * x_{n-2}
+$$
+
+Тогда, $x_n = 10 \cdot x_{n-1} - 25 \cdot x_{n-2}$
+
+1) Составим и решим характеристическое уравнение, заменив $x_n$ на $\lambda^n$:
 
 $$
 \lambda^n= 10 \cdot \lambda^{n-1} - 25 \cdot \lambda^{n-2}
