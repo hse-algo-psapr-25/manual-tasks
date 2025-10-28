@@ -89,5 +89,5 @@ B --> B
 C --> C
 B --> A
 
-linkStyle 2 stroke:red,stroke-width:2px;
+linkStyle 1 stroke:red,stroke-width:2px;
 ```
