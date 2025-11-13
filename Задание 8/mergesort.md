@@ -111,13 +111,13 @@ gantt
 
     section Конвейер 2 (b_i)
     B :b1, after a1, 4h
-    F :b2, after a2, 6h
-    G :b3, after a3, 8h
-    C :b4, after a4, 11h
-    D :b5, after a5, 10h
-    E :b6, after a6, 6h
-    A :b7, after a7, 4h
-    H :b8, after a8, 1h
+    F :b2, after a2 b1, 6h
+    G :b3, after a3 b2, 8h
+    C :b4, after a4 b3, 11h
+    D :b5, after a5 b4, 10h
+    E :b6, after a6 b5, 6h
+    A :b7, after a7 b6, 4h
+    H :b8, after a8 b7, 1h
     
     Окончание выполнения работ : milestone, m2, 03 05:00, 0h
 ```
