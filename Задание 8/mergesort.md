@@ -58,7 +58,7 @@ gantt
     T3                : e2a, 00:00, 4h
     T4                : e2b, after e2a, 5h
     T5                : e2c, after e2b, 6h
-    T6 (part 1 of 2)  : e2d, after e2c, 2h
+    T6                : e2d, after e2c, 2h
 
     section Исполнитель 3
     T6                : e3a, 00:00, 6h
@@ -95,6 +95,8 @@ gantt
     title Диаграмма Ганта - Конвейерная задача
     dateFormat DD HH:mm    
     axisFormat  %H:%M
+    excludes weekends
+
     Начало выполнения работ : milestone, m1, 01 00:00, 0h
 
     section Конвейер 1 (a_i)
