@@ -46,21 +46,26 @@ gantt
     axisFormat %H:%M
     Начало выполнения работ : milestone, m1, 00:00, 0h
     section Исполнитель 1
-    M(13)         :c, 00:00, 1h
-    K(11)         :i, after c, 1h    
+    F(13)         :a, 00:00, 1h
+    M(9)          :e, after a, 1h
+    A(5)          :i, after e, 1h
+    H(3)          :l, after i, 1h
+    B(1)          :m, after l, 1h
 
     section Исполнитель 2
-    L(12)         :d, 00:00, 1h
-    F(10)         :f, after d, 1h
+    K(12)         :b, 00:00, 1h
+    E(8)          :f, after b, 1h
+    J(4)          :j, after f, 1h
 
     section Исполнитель 3
-    L(12)         :d, 00:00, 1h
-    F(10)         :f, after d, 1h
+    I(11)         :c, 00:00, 1h
+    C(7)          :g, after c, 1h
+    G(2)          :k, after g, 1h
 
     section Исполнитель 4
-    L(12)         :d, 00:00, 1h
-    F(10)         :f, after d, 1h
+    L(10)         :d, 00:00, 1h
+    D(6)         :h, after d, 1h
 
-    Окончание выполнения работ : milestone, m2, 07:00, 0h
+    Окончание выполнения работ : milestone, m2, 05:00, 0h
 ```
-###  Ответ:  кратчайшее расписание имеет длительность 7.
+###  Ответ:  кратчайшее расписание имеет длительность 5.
