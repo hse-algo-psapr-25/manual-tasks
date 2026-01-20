@@ -203,8 +203,6 @@ graph LR
     style B fill:#008000
     style D fill:#008000
     style 5 fill:#008000
-    style 1 fill:#008000
-    style C fill:#008000
 ```
 **В полученом графе существует цепь**
 
