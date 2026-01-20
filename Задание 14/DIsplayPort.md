@@ -190,11 +190,7 @@ graph LR
         D((D))
     end
     subgraph "3 фр." 
-        1((1))
         3((3))
-    end
-    subgraph "4 фр." 
-        C((C))
     end
 
     E --- 4
