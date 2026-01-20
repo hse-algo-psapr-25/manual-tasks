@@ -197,9 +197,7 @@ graph LR
     E --- 5
     4 === B
     5 === D
-    D --- 1
     D --- 3
-    1 === C
 
     style 4 fill:#008000
     style B fill:#008000
