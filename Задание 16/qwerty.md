@@ -17,43 +17,77 @@
 |          Дуги          | sa | sс | aс | ba | cb | at | bt | ct |
 |:----------------------:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | Пропускная способность | 8  | 6  | 7  | 4  | 9  | 3  | 9  | 4  | 
+
+---
+### Решение
+
+1. Построим сеть с источником **s**, стоком **t** и указанными пропускными способностями дуг.
+   <img width="443" height="309" alt="image" src="https://github.com/user-attachments/assets/89b2b138-f8ad-4518-ae3b-7f6fdbbd091e" />
+
+   Все дуги в исходной сети пустые, поток равен нулю.
+
+3. Для поиска максимального потока построим остаточную цепь, в которую вынесем обратно ориентированные дуги с весами, равными пропускным способностям.
+  <img width="455" height="305" alt="image" src="https://github.com/user-attachments/assets/2420e427-c3ac-4abb-a630-dbc24d5dbca1" />
+   
+5. Найдём в остаточной сети увеличивающий поток, пусть это будет путь $t \rightarrow b \rightarrow c \rightarrow \ s$. Минимальный вес дуги на этом пути равен 6. 
+    <img width="455" height="304" alt="image" src="https://github.com/user-attachments/assets/99d629fb-cb9e-45d8-9443-7b9d36e00585" />
+    
+6. Уменьшим вес всех дуг в этом пути на 6. У дуги $sc$ вес стал равен 0, удалим её из сети.
+  <img width="436" height="300" alt="image" src="https://github.com/user-attachments/assets/84475d4c-0c3e-48bd-b7bc-6e3093046a94" />
+
+7. Соответствующим образом изменим исходную сеть и увеличим локальные потоки, вторым значением укажем пропускную способность дуги.
+  <img width="454" height="309" alt="image" src="https://github.com/user-attachments/assets/23741cd9-9365-4ccf-bea7-289113943959" />
+
+8.  Повторно выполним поиск увеличивающего пути в остаточной сети, такой путь найден: $t \rightarrow a \rightarrow s$. Минимальный вес на этом пути равен 4.
+  <img width="435" height="296" alt="image" src="https://github.com/user-attachments/assets/2072246d-9084-4494-a51a-c861fc7a78f8" />
+
+9.  Уменьшим вес дуг на найденном пути на 4, и удалим из сети дугу $tc$, вес которой стал равен 0.
+  <img width="438" height="308" alt="image" src="https://github.com/user-attachments/assets/7c3e6b6f-ac87-47ea-82ca-98c09431ff59" />
+
+10. Скорректируем исходную есть, увеличив соответствующие локальные потоки.
+  <img width="442" height="292" alt="image" src="https://github.com/user-attachments/assets/9e25f523-cb6b-40d4-a7dc-15660d437e46" />
+
+11. В остаточной сети найден увеличивающий путь $t \rightarrow a \rightarrow s$. Минимальный вес дуги в этом равен 3.
+  <img width="426" height="304" alt="image" src="https://github.com/user-attachments/assets/cfe8420e-4d36-4bc4-8a23-1dbfb4b7ea0a" />
+
+12. Уменьшим вес дуг этого пути на 3. У дуги $ta$ вес стал равен 0, удалим её из сети.
+  <img width="432" height="299" alt="image" src="https://github.com/user-attachments/assets/5e26b312-aae3-4a49-9fca-a58b4fe38298" />
+
+13. Соответствующим образом скорректируем исходную сеть, увеличив локальные потоки.
+  <img width="428" height="306" alt="image" src="https://github.com/user-attachments/assets/ddaf41b4-25fd-4379-844c-eb37f5055bc4" />
+
+14. В остаточной сети найден увеличивающий путь $t \rightarrow b \rightarrow c \rightarrow a \rightarrow s$. Минимальный вес дуги этого пути равен 1.
+  <img width="440" height="303" alt="image" src="https://github.com/user-attachments/assets/5458dc6e-4223-4c82-ad5a-116cd7953c12" />
+
+15. Уменьшим вес дуг этого пути на 1. У дуги $as$ вес стал равен 0, удалим её из сети.
+  <img width="426" height="316" alt="image" src="https://github.com/user-attachments/assets/471d09f7-683b-4e93-a716-f4950c89a666" />
+
+16. Отобразим изменения в исходной сети.
+  <img width="434" height="289" alt="image" src="https://github.com/user-attachments/assets/14ccae26-1124-4fd7-aa79-e55989cd3527" />
+
+17. Обратим внимание, что в остаточной сети больше не осталось увеличивающих путей, т. е. путей из стока $t$ в источник $s$. Тогда, согласно теореме, поток в исходной сети является максимальным, алгоритм завершает свою работу. Определим максимальный поток, сложив веса дуг, смежных с одной из вершин $t$ или $s$.
+
+$$
+F = 8 +6 = 3 + 7 + 4 = 14.
+$$
+
+18. Проверим значение максимального потока перебором всех разрезов сети. В сети с 5 вершинами всего $2^{n-2}=2^3=8$ разрезов. Для каждого из разрезов укажем вершины, входящие в множества $V_1$ и $V_2$, и определим пропускную способность.
+
+| № | V<sub>1</sub>                   | V<sub>2</sub> | Пропускная способность разреза |
+|---|:--------------------------------|:--------------|:------------------------------:|
+| 1 | s                               | a, b, c, t    |           8 + 6 = **14**       |
+| 2 | s, a                            | b, c, t       |         6 + 7 + 3 = 16         |
+| 3 | s, b                            | a, c, t       |         6 + 7 + 4 + 9 = 26         |
+| 4 | s, c                            | a, b, t       |         8 + 9 + 4 = 21         |
+| 5 | s, a, b                         | c, t          |         6 + 7 + 3 + 9 = 25         |
+| 6 | s, a, c                         | b, t          |         3 + 9 + 4 = 16         |
+| 7 | s, b, c                         | a, t          |         8 + 9 + 4 = 21         |
+| 8 | s, a, b, c                      | t             |           4 + 3 + 9 = 16           |
+
+Минимальный поток разрезов равен 14 и совпадает с найденным ранее максимальным потоком сети.
+
 ---
 
-1
-<img width="624" height="420" alt="image" src="https://github.com/user-attachments/assets/0248efbd-d15d-4fe0-9f3e-780a4554c2c0" />
-
-2
-<img width="607" height="409" alt="image" src="https://github.com/user-attachments/assets/7cafaeba-33f2-4d1d-aa9f-50e117fdb202" />
-
-3
-<img width="584" height="404" alt="image" src="https://github.com/user-attachments/assets/8c04df7e-6865-4ea9-a0db-060d3d50619b" />
-
-4
-<img width="625" height="416" alt="image" src="https://github.com/user-attachments/assets/d2af8092-8bbc-4d3c-8d01-436e441ae0db" />
-
-5
-<img width="587" height="404" alt="image" src="https://github.com/user-attachments/assets/80d90ad3-40b4-4f52-8051-70f63f946cb7" />
-
-6
-<img width="611" height="422" alt="image" src="https://github.com/user-attachments/assets/db5a0419-3d12-4301-95f5-f91617da0d02" />
-
-7
-<img width="668" height="450" alt="image" src="https://github.com/user-attachments/assets/250566fd-6e8a-46ba-8ea4-84d0f9dda80d" />
-
-8
-<img width="624" height="430" alt="image" src="https://github.com/user-attachments/assets/1225a1e5-44a4-416c-8d3a-83dd1d92ce04" />
-
-9
-<img width="593" height="412" alt="image" src="https://github.com/user-attachments/assets/0f592187-8453-4788-afa8-1d10e5d94972" />
-
-10
-<img width="608" height="415" alt="image" src="https://github.com/user-attachments/assets/5b2c0b7d-a296-4311-9ac6-a5b2220fdc61" />
-
-11
-<img width="588" height="405" alt="image" src="https://github.com/user-attachments/assets/bb388d8b-1685-4829-8c7e-0c3579c1564f" />
-
-12
-<img width="602" height="407" alt="image" src="https://github.com/user-attachments/assets/be4427fc-26c3-4820-bd80-2417ff1ebf3a" />
-
-13
-<img width="619" height="431" alt="image" src="https://github.com/user-attachments/assets/cfc33ce6-7024-4546-bbc4-58653b0beb4e" />
+### Ответ
+Максимальный поток в сети равен 14, он реализуется следующим локальными потоками:
+<img width="443" height="309" alt="image" src="https://github.com/user-attachments/assets/22657607-1370-490c-92bf-78bd463fbcb4" />
