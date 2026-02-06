@@ -17,3 +17,6 @@
 |          Дуги          | sa | sс | aс | ba | cb | at | bt | ct |
 |:----------------------:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | Пропускная способность | 8  | 6  | 7  | 4  | 9  | 3  | 9  | 4  | 
+---
+
+<img width="1124" height="804" alt="image" src="https://github.com/user-attachments/assets/8f1d1ffa-ede7-4301-b0c6-b83bf0294152" />
