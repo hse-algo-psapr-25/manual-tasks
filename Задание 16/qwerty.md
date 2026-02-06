@@ -45,7 +45,7 @@
 <img width="438" height="308" alt="image" src="https://github.com/user-attachments/assets/7c3e6b6f-ac87-47ea-82ca-98c09431ff59" />
 
 8. Скорректируем исходную есть, увеличив соответствующие локальные потоки.
-<img width="442" height="292" alt="image" src="https://github.com/user-attachments/assets/9e25f523-cb6b-40d4-a7dc-15660d437e46" />
+<img width="447" height="305" alt="image" src="https://github.com/user-attachments/assets/839b3b18-9040-4e5e-9735-235ddb4bbab6" />
 
 9. В остаточной сети найден увеличивающий путь $t \rightarrow a \rightarrow s$. Минимальный вес дуги в этом равен 3.
 <img width="426" height="304" alt="image" src="https://github.com/user-attachments/assets/cfe8420e-4d36-4bc4-8a23-1dbfb4b7ea0a" />
@@ -54,7 +54,7 @@
 <img width="432" height="299" alt="image" src="https://github.com/user-attachments/assets/5e26b312-aae3-4a49-9fca-a58b4fe38298" />
 
 11. Соответствующим образом скорректируем исходную сеть, увеличив локальные потоки.
-<img width="428" height="306" alt="image" src="https://github.com/user-attachments/assets/ddaf41b4-25fd-4379-844c-eb37f5055bc4" />
+<img width="441" height="304" alt="image" src="https://github.com/user-attachments/assets/4f4a0d84-6e25-44c9-8f69-9c3bc936ac69" />
 
 12. В остаточной сети найден увеличивающий путь $t \rightarrow b \rightarrow c \rightarrow a \rightarrow s$. Минимальный вес дуги этого пути равен 1.
 <img width="440" height="303" alt="image" src="https://github.com/user-attachments/assets/5458dc6e-4223-4c82-ad5a-116cd7953c12" />
@@ -63,7 +63,7 @@
 <img width="426" height="316" alt="image" src="https://github.com/user-attachments/assets/471d09f7-683b-4e93-a716-f4950c89a666" />
 
 14. Отобразим изменения в исходной сети.
-<img width="434" height="289" alt="image" src="https://github.com/user-attachments/assets/14ccae26-1124-4fd7-aa79-e55989cd3527" />
+<img width="431" height="309" alt="image" src="https://github.com/user-attachments/assets/f4c13ba0-26c4-47a1-9ed7-d10cf6349118" />
 
 15. Обратим внимание, что в остаточной сети больше не осталось увеличивающих путей, т. е. путей из стока $t$ в источник $s$. Тогда, согласно теореме, поток в исходной сети является максимальным, алгоритм завершает свою работу. Определим максимальный поток, сложив веса дуг, смежных с одной из вершин $t$ или $s$.
 
@@ -90,4 +90,4 @@ $$
 
 ### Ответ
 Максимальный поток в сети равен 14, он реализуется следующим локальными потоками:
-<img width="443" height="309" alt="image" src="https://github.com/user-attachments/assets/22657607-1370-490c-92bf-78bd463fbcb4" />
+<img width="436" height="302" alt="image" src="https://github.com/user-attachments/assets/87ced468-b834-4bff-9d57-2341c0e54115" />
