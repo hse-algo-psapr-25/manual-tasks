@@ -19,4 +19,5 @@
 | Пропускная способность | 8  | 6  | 7  | 4  | 9  | 3  | 9  | 4  | 
 ---
 
-<img width="1124" height="804" alt="image" src="https://github.com/user-attachments/assets/8f1d1ffa-ede7-4301-b0c6-b83bf0294152" />
+<img width="489" height="319" alt="image" src="https://github.com/user-attachments/assets/58eda107-af68-4a56-9113-966ba3c694e9" />
+
