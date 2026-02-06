@@ -22,48 +22,48 @@
 ### Решение
 
 1. Построим сеть с источником **s**, стоком **t** и указанными пропускными способностями дуг.
-   <img width="443" height="309" alt="image" src="https://github.com/user-attachments/assets/89b2b138-f8ad-4518-ae3b-7f6fdbbd091e" />
+<img width="443" height="309" alt="image" src="https://github.com/user-attachments/assets/89b2b138-f8ad-4518-ae3b-7f6fdbbd091e" />
 
    Все дуги в исходной сети пустые, поток равен нулю.
 
 2. Для поиска максимального потока построим остаточную сеть, в которую вынесем обратно ориентированные дуги с весами, равными пропускным способностям.
-   <img width="455" height="305" alt="image" src="https://github.com/user-attachments/assets/2420e427-c3ac-4abb-a630-dbc24d5dbca1" />
+<img width="455" height="305" alt="image" src="https://github.com/user-attachments/assets/2420e427-c3ac-4abb-a630-dbc24d5dbca1" />
    
 3. Найдём в остаточной сети увеличивающий поток, пусть это будет путь $t \rightarrow b \rightarrow c \rightarrow \ s$. Минимальный вес дуги в этом пути равен 6. 
-   <img width="455" height="304" alt="image" src="https://github.com/user-attachments/assets/99d629fb-cb9e-45d8-9443-7b9d36e00585" />
+<img width="455" height="304" alt="image" src="https://github.com/user-attachments/assets/99d629fb-cb9e-45d8-9443-7b9d36e00585" />
     
 4. Уменьшим вес всех дуг в этом пути на 6. У дуги $sc$ вес стал равен 0, удалим её из сети.
-   <img width="436" height="300" alt="image" src="https://github.com/user-attachments/assets/84475d4c-0c3e-48bd-b7bc-6e3093046a94" />
+<img width="436" height="300" alt="image" src="https://github.com/user-attachments/assets/84475d4c-0c3e-48bd-b7bc-6e3093046a94" />
 
 5. Соответствующим образом изменим исходную сеть и увеличим локальные потоки, вторым значением укажем пропускную способность дуги.
-   <img width="454" height="309" alt="image" src="https://github.com/user-attachments/assets/23741cd9-9365-4ccf-bea7-289113943959" />
+<img width="454" height="309" alt="image" src="https://github.com/user-attachments/assets/23741cd9-9365-4ccf-bea7-289113943959" />
 
 6.  Повторно выполним поиск увеличивающего пути в остаточной сети, такой путь найден: $t \rightarrow a \rightarrow s$. Минимальный вес на этом пути равен 4.
-   <img width="435" height="296" alt="image" src="https://github.com/user-attachments/assets/2072246d-9084-4494-a51a-c861fc7a78f8" />
+<img width="435" height="296" alt="image" src="https://github.com/user-attachments/assets/2072246d-9084-4494-a51a-c861fc7a78f8" />
 
 7.  Уменьшим вес дуг на найденном пути на 4, и удалим из сети дугу $tc$, вес которой стал равен 0.
-   <img width="438" height="308" alt="image" src="https://github.com/user-attachments/assets/7c3e6b6f-ac87-47ea-82ca-98c09431ff59" />
+<img width="438" height="308" alt="image" src="https://github.com/user-attachments/assets/7c3e6b6f-ac87-47ea-82ca-98c09431ff59" />
 
 8. Скорректируем исходную есть, увеличив соответствующие локальные потоки.
-   <img width="442" height="292" alt="image" src="https://github.com/user-attachments/assets/9e25f523-cb6b-40d4-a7dc-15660d437e46" />
+<img width="442" height="292" alt="image" src="https://github.com/user-attachments/assets/9e25f523-cb6b-40d4-a7dc-15660d437e46" />
 
 9. В остаточной сети найден увеличивающий путь $t \rightarrow a \rightarrow s$. Минимальный вес дуги в этом равен 3.
-   <img width="426" height="304" alt="image" src="https://github.com/user-attachments/assets/cfe8420e-4d36-4bc4-8a23-1dbfb4b7ea0a" />
+<img width="426" height="304" alt="image" src="https://github.com/user-attachments/assets/cfe8420e-4d36-4bc4-8a23-1dbfb4b7ea0a" />
 
 10. Уменьшим вес дуг этого пути на 3. У дуги $ta$ вес стал равен 0, удалим её из сети.
-   <img width="432" height="299" alt="image" src="https://github.com/user-attachments/assets/5e26b312-aae3-4a49-9fca-a58b4fe38298" />
+<img width="432" height="299" alt="image" src="https://github.com/user-attachments/assets/5e26b312-aae3-4a49-9fca-a58b4fe38298" />
 
 11. Соответствующим образом скорректируем исходную сеть, увеличив локальные потоки.
-   <img width="428" height="306" alt="image" src="https://github.com/user-attachments/assets/ddaf41b4-25fd-4379-844c-eb37f5055bc4" />
+<img width="428" height="306" alt="image" src="https://github.com/user-attachments/assets/ddaf41b4-25fd-4379-844c-eb37f5055bc4" />
 
 12. В остаточной сети найден увеличивающий путь $t \rightarrow b \rightarrow c \rightarrow a \rightarrow s$. Минимальный вес дуги этого пути равен 1.
-   <img width="440" height="303" alt="image" src="https://github.com/user-attachments/assets/5458dc6e-4223-4c82-ad5a-116cd7953c12" />
+<img width="440" height="303" alt="image" src="https://github.com/user-attachments/assets/5458dc6e-4223-4c82-ad5a-116cd7953c12" />
 
 13. Уменьшим вес дуг этого пути на 1. У дуги $as$ вес стал равен 0, удалим её из сети.
-   <img width="426" height="316" alt="image" src="https://github.com/user-attachments/assets/471d09f7-683b-4e93-a716-f4950c89a666" />
+<img width="426" height="316" alt="image" src="https://github.com/user-attachments/assets/471d09f7-683b-4e93-a716-f4950c89a666" />
 
 14. Отобразим изменения в исходной сети.
-   <img width="434" height="289" alt="image" src="https://github.com/user-attachments/assets/14ccae26-1124-4fd7-aa79-e55989cd3527" />
+<img width="434" height="289" alt="image" src="https://github.com/user-attachments/assets/14ccae26-1124-4fd7-aa79-e55989cd3527" />
 
 15. Обратим внимание, что в остаточной сети больше не осталось увеличивающих путей, т. е. путей из стока $t$ в источник $s$. Тогда, согласно теореме, поток в исходной сети является максимальным, алгоритм завершает свою работу. Определим максимальный поток, сложив веса дуг, смежных с одной из вершин $t$ или $s$.
 
