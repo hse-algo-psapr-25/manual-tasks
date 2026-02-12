@@ -55,7 +55,7 @@ graph RL
 
 ### 3. Поиск увеличивающих путей
 
-**Путь 1:** t → a → s, минимальный поток = 7.
+**Путь 1:** t → a → s, Минимальный вес дуг на этом пути равен 7.
 ```mermaid
 graph RL
     s(((s)))
@@ -101,7 +101,7 @@ graph LR
     linkStyle 0 stroke:red,stroke-width:4px
     linkStyle 4 stroke:red,stroke-width:4px
 ```
-**Путь 2:** t → d → b → s, минимальный поток = 7.
+**Путь 2:** t → d → b → s, Минимальный вес дуг на этом пути равен 7.
 ```mermaid
 graph LR
     s(((s)))
@@ -120,7 +120,7 @@ graph LR
     t -->|9| c
     t -->|9| d
     
-    s -->|2| a
+    s -->|7| a
     a -->|7| t
     
     
@@ -152,7 +152,7 @@ graph LR
     linkStyle 6 stroke:red,stroke-width:4px
     linkStyle 8 stroke:red,stroke-width:4px
 ```
-**Путь 3:** t → c → s, минимальный поток = 4.
+**Путь 3:** t → c → s, Минимальный вес дуг на этом пути равен 4.
 ```mermaid
 graph LR
     s(((s)))
@@ -174,7 +174,7 @@ graph LR
     a -->|7| t
     s -->|7| b
     b -->|7| d
-    t -->|7| d
+    d -->|7| t
     
     linkStyle 5 stroke:red,stroke-width:4px
     linkStyle 2 stroke:red,stroke-width:4px
@@ -203,7 +203,7 @@ graph LR
     linkStyle 2 stroke:red,stroke-width:4px
     linkStyle 7 stroke:red,stroke-width:4px
 ```
-**Путь 3:** t → c → a → s, минимальный поток = 2.
+**Путь 3:** t → c → a → s, Минимальный вес дуг на этом пути равен 2.
 ```mermaid
 graph LR
     s(((s)))
@@ -387,6 +387,31 @@ graph LR
 
 Удалим найденный цикл - уменьшим на 3 вес всех ребер, входящих в цикл.
 
+```mermaid
+graph LR
+    s(((s)))
+    a((a))
+    b((b))
+    c((c))
+    d((d))
+    t(((t)))
+
+    b -->|2| s
+    c -->|1| a
+    b -->|4| a
+    t -->|2| d
+
+
+    s -->|9| a
+    s -->|7| b
+    s -->|4| c
+    a -->|2| c
+    a -->|4| t
+    t -->|3| a
+    b -->|7| d
+    c -->|9| t
+    d -->|7| t
+```
 
 ```mermaid
 graph LR
