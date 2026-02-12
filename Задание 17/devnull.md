@@ -29,27 +29,27 @@
 
 Построим соответствующую остаточную сеть.
 
-<img width="893" height="487" alt="image" src="https://github.com/user-attachments/assets/92bc9be0-1aad-4b31-8c44-07ebe308b46a" />
+<img width="956" height="537" alt="image" src="https://github.com/user-attachments/assets/cddddf5e-fd5d-417c-954d-495cbca2724c" />
 
 ### 2. Проведем поиск увеличивающего пути в остаточной сети
 В остаточной сети найден увеличивающий путь t -> d -> b -> s. Минимальный вес дуг на этом пути равен 6.
 
-<img width="772" height="429" alt="image" src="https://github.com/user-attachments/assets/13b85fc8-6cfb-4cc9-a821-d51dde4488cb" />
+<img width="952" height="526" alt="image" src="https://github.com/user-attachments/assets/b53cebf6-54c1-4d32-a63d-43419b4c7467" />
 
 Уменьшим вес дуг на найденном пути, дуги для которых вес стал нулевым удалим из остаточной сети.
 
-<img width="812" height="473" alt="image" src="https://github.com/user-attachments/assets/e4a5b9bf-7928-45ee-8d11-856e76dd2adc" />
+<img width="972" height="561" alt="image" src="https://github.com/user-attachments/assets/c7a212c4-f6dd-4d3a-bba3-a4531352e578" />
 
 <img width="777" height="418" alt="image" src="https://github.com/user-attachments/assets/7c3a815c-6673-4a55-a50d-7cd5a44d2a23" />
 
 ### 3. Продолжим поиск увеличивающего пути в остаточной сети
 В остаточной сети найден увеличивающий путь t -> d -> c -> b -> s. Минимальный вес дуг на этом пути равен 3.
 
-<img width="775" height="456" alt="image" src="https://github.com/user-attachments/assets/c40878d2-08e5-43ad-92b7-730775e50078" />
+<img width="943" height="547" alt="image" src="https://github.com/user-attachments/assets/ad1645fc-be1f-4858-aaeb-dada8fcbf638" />
 
 Уменьшим вес дуг на найденном пути, дуги для которых вес стал нулевым удалим из остаточной сети.
 
-<img width="804" height="472" alt="image" src="https://github.com/user-attachments/assets/1628d3a0-be5b-4ee9-a209-779f02314baf" />
+<img width="968" height="540" alt="image" src="https://github.com/user-attachments/assets/996eaad4-8ef7-458e-acc2-889a07c0a9ca" />
 
 ### 4. Продолжим поиск увеличивающего пути в остаточной сети
 
@@ -71,15 +71,15 @@
 ### 6. Попробуем уменьшить стоимость потока для чего построим остаточную сеть.
 Для каждого ребра остаточной сети укажем стоимость транспортировки единицы потока.
 
-<img width="790" height="463" alt="image" src="https://github.com/user-attachments/assets/72fc5d84-6ed4-4825-8037-11889974d4a3" />
+<img width="940" height="563" alt="image" src="https://github.com/user-attachments/assets/0abf1fca-a7bb-4a84-9861-57f6802f2055" />
 
 В остаточной сети найден ориентированный цикл отрицательной стоимости d -> c -> b -> d (5 + 1 - 7 = -1). 
 
-<img width="768" height="454" alt="image" src="https://github.com/user-attachments/assets/24611757-ff4f-4bbb-a41f-e582042b744f" />
+<img width="871" height="506" alt="image" src="https://github.com/user-attachments/assets/da478546-37a6-4cf5-b039-2667aa6e2629" />
 
 Найдем минимальный вес ребра в указанном цикле, изображенном **в остаточной сети с указанием величины потока**.  
 
-<img width="621" height="372" alt="image" src="https://github.com/user-attachments/assets/d6828821-6f11-4555-a5c5-ee458711d8be" />
+<img width="882" height="495" alt="image" src="https://github.com/user-attachments/assets/21f5ad91-b445-46e7-9700-7029109110bd" />
 
 Минимальный вес ребра в цикле 2 
 
@@ -87,9 +87,9 @@
 
 Скорректируем остаточную сеть с указанием стоимости транспортировки единицы потока.
 
-<img width="751" height="451" alt="image" src="https://github.com/user-attachments/assets/3e115973-b831-40d6-9629-ab2b8a62c57a" />
+<img width="860" height="525" alt="image" src="https://github.com/user-attachments/assets/24338747-6fb4-458f-af98-1b07185fa3d0" />
 
-<img width="747" height="473" alt="image" src="https://github.com/user-attachments/assets/b21de0bf-0488-4a3f-a891-dd134afc585d" />
+<img width="857" height="499" alt="image" src="https://github.com/user-attachments/assets/82f85c0a-f619-4101-8d1e-12c7106979c2" />
 
 ### 7. Проведем повторный поиск цикла отрицательной стоимости в остаточной сети.
 
