@@ -19,26 +19,26 @@
 
 ### 1. Построим сеть с источником **s**, стоком **t** и указанными пропускными способностями дуг для поиска максимального потока.
 
-<img width="975" height="539" alt="image" src="https://github.com/user-attachments/assets/59e33174-feec-4b9b-a325-bea3f822d6a4" />
+<img width="805" height="419" alt="image" src="https://github.com/user-attachments/assets/117aa0d8-513b-42af-acab-a7283510295a" />
 
 Укажем начальный поток величиной 6 **s -> a -> d -> t**. 
 
-<img width="846" height="450" alt="image" src="https://github.com/user-attachments/assets/ede3e301-cec6-422c-8412-9665d1a4881a" />
+<img width="799" height="448" alt="image" src="https://github.com/user-attachments/assets/13d80117-1162-43e5-901e-ea7dcb145e11" />
 
 <img width="865" height="458" alt="image" src="https://github.com/user-attachments/assets/e559b2ce-125a-41fe-91a5-c4f5a0e452d4" />
 
 Построим соответствующую остаточную сеть.
 
-<img width="956" height="537" alt="image" src="https://github.com/user-attachments/assets/cddddf5e-fd5d-417c-954d-495cbca2724c" />
+<img width="648" height="345" alt="image" src="https://github.com/user-attachments/assets/e3288d77-d284-42d7-92ae-37e38474aefd" />
 
 ### 2. Проведем поиск увеличивающего пути в остаточной сети
 В остаточной сети найден увеличивающий путь t -> d -> b -> s. Минимальный вес дуг на этом пути равен 6.
 
-<img width="952" height="526" alt="image" src="https://github.com/user-attachments/assets/b53cebf6-54c1-4d32-a63d-43419b4c7467" />
+<img width="769" height="459" alt="image" src="https://github.com/user-attachments/assets/3ac6af6d-7eee-42d8-acff-a4271b7174d3" />
 
 Уменьшим вес дуг на найденном пути, дуги для которых вес стал нулевым удалим из остаточной сети.
 
-<img width="972" height="561" alt="image" src="https://github.com/user-attachments/assets/c7a212c4-f6dd-4d3a-bba3-a4531352e578" />
+<img width="781" height="451" alt="image" src="https://github.com/user-attachments/assets/6da34b86-01f1-42dc-a6e5-f47a2b816dc5" />
 
 <img width="777" height="418" alt="image" src="https://github.com/user-attachments/assets/7c3a815c-6673-4a55-a50d-7cd5a44d2a23" />
 
@@ -71,15 +71,15 @@
 ### 6. Попробуем уменьшить стоимость потока для чего построим остаточную сеть.
 Для каждого ребра остаточной сети укажем стоимость транспортировки единицы потока.
 
-<img width="940" height="563" alt="image" src="https://github.com/user-attachments/assets/0abf1fca-a7bb-4a84-9861-57f6802f2055" />
+<img width="759" height="462" alt="image" src="https://github.com/user-attachments/assets/989d4f32-d3e6-4769-8426-886e5ccca9a1" />
 
 В остаточной сети найден ориентированный цикл отрицательной стоимости d -> c -> b -> d (5 + 1 - 7 = -1). 
 
-<img width="871" height="506" alt="image" src="https://github.com/user-attachments/assets/da478546-37a6-4cf5-b039-2667aa6e2629" />
+<img width="792" height="467" alt="image" src="https://github.com/user-attachments/assets/9e5b3f6d-51c5-4490-b8c2-5750f7de0110" />
 
 Найдем минимальный вес ребра в указанном цикле, изображенном **в остаточной сети с указанием величины потока**.  
 
-<img width="882" height="495" alt="image" src="https://github.com/user-attachments/assets/21f5ad91-b445-46e7-9700-7029109110bd" />
+<img width="789" height="447" alt="image" src="https://github.com/user-attachments/assets/3b581e11-8b02-48a9-8209-1ac01615ea1b" />
 
 Минимальный вес ребра в цикле 2 
 
@@ -87,9 +87,9 @@
 
 Скорректируем остаточную сеть с указанием стоимости транспортировки единицы потока.
 
-<img width="860" height="525" alt="image" src="https://github.com/user-attachments/assets/24338747-6fb4-458f-af98-1b07185fa3d0" />
+<img width="801" height="480" alt="image" src="https://github.com/user-attachments/assets/5524cb4f-83ec-45bf-b7af-e43815eea361" />
 
-<img width="857" height="499" alt="image" src="https://github.com/user-attachments/assets/82f85c0a-f619-4101-8d1e-12c7106979c2" />
+<img width="773" height="462" alt="image" src="https://github.com/user-attachments/assets/7815dbd5-bbdf-433b-8a28-5053b580af82" />
 
 ### 7. Проведем повторный поиск цикла отрицательной стоимости в остаточной сети.
 
