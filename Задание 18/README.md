@@ -84,8 +84,8 @@ flowchart TD
 A(68)
 B(53)
 C(51)
-A -- -E--> B
-A --+E--> C
+A -- +E--> B
+A -- -E--> C
 
 style B fill:#4f4f
 ```
