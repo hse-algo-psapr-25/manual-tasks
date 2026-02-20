@@ -14,31 +14,36 @@
 
 ## 1. Построим сеть с источником **s**, стоком **t** и указанными пропускными способностями дуг для поиска максимального потока.
 
-![alt text](../assets/NoName-17-1.png)
+<img width="340" height="271" alt="NoName-task-17-1" src="https://github.com/user-attachments/assets/f17d99b1-c147-4690-bda0-61f954c53c4f" />
+
 
 Укажем начальный поток величиной 6 s -> a -> d -> t.
 
-![alt text](../assets/NoName-17-2.png)
+<img width="389" height="273" alt="NoName-task-17-2" src="https://github.com/user-attachments/assets/dd04249d-29e9-4e50-9399-79eeb9a2f528" />
 
 Построим соответствующую остаточную сеть.
 
-![alt text](../assets/NoName-17-3.png)
+<img width="411" height="301" alt="NoName-task-17-3" src="https://github.com/user-attachments/assets/9be80242-7148-48fb-bd18-436b7c073a1a" />
+
 
 ## 2. Проведем поиск увеличивающего пути в остаточной сети.
 
 В остаточной сети найден увеличивающий путь t -> d -> c -> s. Минимальный вес дуг на этом пути равен 6.
 
-![alt text](../assets/NoName-17-4.png)
+<img width="381" height="289" alt="NoName-task-17-4" src="https://github.com/user-attachments/assets/8fe4dc06-bd8c-4183-b449-55cb7bc8a834" />
+
 
 Уменьшим вес дуг на найденном пути, дуги для которых вес стал нулевым удалим из остаточной сети.
 
-![alt text](../assets/NoName-17-5.png)
+<img width="299" height="223" alt="NoName-task-17-5" src="https://github.com/user-attachments/assets/8de455fa-6e30-4e9e-9542-147475970a2f" />
+
 
 ## 3. Продолжим поиск увеличивающего пути в остаточной сети.
 
 В остаточной сети не найдено увеличивающих путей, следовательно, алгоритм завершил работу и найденный поток величиной 12 является максимальным для данной сети.
 
-![alt text](../assets/NoName-17-6.png)
+<img width="385" height="283" alt="NoName-task-17-6" src="https://github.com/user-attachments/assets/7552f4b5-ded4-4ad3-976b-bfc78aa8ab54" />
+
 
 ### 4. Рассчитаем стоимость полученного максимального потока.
 
@@ -60,34 +65,40 @@
 
 Остаточная сеть с указанием стоимости транспортировки единицы потока:
 
-![alt text](../assets/NoName-17-7.png)
+<img width="367" height="276" alt="NoName-task-17-7" src="https://github.com/user-attachments/assets/015db62d-da32-4bf1-839a-a2a7f324a1c1" />
+
 
 ## 7. Поиск цикла отрицательной стоимости в остаточной сети.
 
 В остаточной сети найден ориентированный цикл отрицательной стоимости s -> c -> b -> s  (- 3 + 1 +1= -1).
 
-![alt text](../assets/NoName-17-8.png)
+<img width="337" height="254" alt="NoName-task-17-8" src="https://github.com/user-attachments/assets/6fd57bc8-5e0f-428f-92c2-326b5e3e4843" />
+
 
 Найдем минимальный вес ребра в указанном цикле, изображенном в остаточной сети с указанием величины потока.
 
-![alt text](../assets/NoName-17-9.png)
+<img width="360" height="280" alt="NoName-task-17-9" src="https://github.com/user-attachments/assets/befc9675-3e45-44e7-89e8-ebd5e3663e2a" />
+
 
 Минимальный вес ребра в цикле 5.
 Удалим найденный цикл - уменьшим на 5 вес всех ребер, входящих в цикл.
 Скорректируем остаточную сеть с указанием стоимости транспортировки единицы потока.
 
-[alt text](../assets/NoName-17-10.png)
+<img width="456" height="343" alt="NoName-task-17-10" src="https://github.com/user-attachments/assets/0addf24d-899a-4328-8320-c89f1b820d32" />
+
 
 ## 8. Проведем повторный поиск цикла отрицательной стоимости в остаточной сети.
 
 В остаточной сети найден ориентированный цикл отрицательной стоимости d -> c -> s -> a ( 1 + 3 -1 - 4 = -1)
 
-![alt text](../assets/NoName-17-11.png)
+<img width="1004" height="374" alt="NoName-task-17-11" src="https://github.com/user-attachments/assets/ca3f20f2-cf21-4c59-b26a-39ed386898f4" />
+
 
 
 Найдем минимальный вес ребра в указанном цикле, изображенном в остаточной сети с указанием величины потока.
 
-![alt text](../assets/NoName-17-12.png)
+<img width="1012" height="353" alt="NoName-task-17-12" src="https://github.com/user-attachments/assets/7e9fac48-a5af-4397-a84a-23c056fbc0e1" />
+
 
 ## 9. Проведем повторный поиск цикла отрицательной стоимости в остаточной сети.
 В остаточной сети отсутствуют циклы отрицательной стоимости, следовательно, стоимость потока минимальна.
@@ -106,4 +117,5 @@
 
 Максимальный поток в сети равен **12**, минимальная стоимость потока **57**, она реализуется следующим локальными потоками:
 
-![alt text](../assets/NoName-17-13.png)
+<img width="538" height="372" alt="NoName-task-17-13" src="https://github.com/user-attachments/assets/985dedab-89c6-4ffb-ad0a-36b49352d000" />
+
